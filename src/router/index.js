@@ -12,9 +12,11 @@ const routes = [
     component: Home,
   },
   {
+    // lazy loading components uses code splitting: the compunent is added in only f we visit the page (use in production to save memory)
     path: "/about",
     name: "About",
-    component: About,
+    //component: About,
+    component: () => import("../views/About.vue"),
   },
   {
     path: "/jobs",
