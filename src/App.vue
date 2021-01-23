@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{ name : 'About'}">About</router-link> | <!-- bind to the component : good practice to use as it would help if I change the paths in the future-->
+  <router-link :to="{ name : 'Jobs'}">Jobs</router-link>
   </div>
   <!--  <router-view/> : this is where the component is injected -->
   <router-view/>
